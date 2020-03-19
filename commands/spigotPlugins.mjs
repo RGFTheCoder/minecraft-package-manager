@@ -129,6 +129,7 @@ export async function updateSpigotPlugin(id, conf) {
   let res = await fetch(templates.resourceData(id));
   let json = await res.json();
   let choice = json;
+  choice.name = choice.name.replace(/[^a-zA-Z0-9]/g, '');
   if (choice.version.id > conf.ver) {
     console.log(
       templates.versionChange(choice.name, conf.ver, choice.version.id)
