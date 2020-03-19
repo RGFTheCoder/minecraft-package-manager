@@ -14,5 +14,6 @@
     "ansi-colors": "^4.1.1",
     "node-fetch": "^2.6.0",
     "unzip-stream": "^0.3.0"
-  }
+  },
+  "bin": "main.mjs"
 }
