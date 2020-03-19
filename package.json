@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "minecraft-package-manager",
+  "name": "node-minecraft-package-manager",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
