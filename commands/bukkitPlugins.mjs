@@ -67,5 +67,5 @@ export async function updateBukkitPlugin(id) {
     this,
     this.plugins.filter(a => a.id == id)
   );
-  await installBukkitPluginObj.apply(this, [id]);
+  await installBukkitPlugin.apply(this, [id]);
 }
