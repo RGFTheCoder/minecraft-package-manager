@@ -51,6 +51,11 @@ export async function installBukkitPlugin(name) {
     const dest = createWriteStream(tmpFile);
     const writer = res.body.pipe(dest);
 
+    await new Promise((res, rej) => {
+      writer.once('close', res);
+      writer.once('error', rej);
+    });
+
     const files = this.plugins.filter(a => a.id == name)[0].files;
 
     files.push(tempFile('.', name.replace(/[^a-zA-Z0-9]/g, '')));
