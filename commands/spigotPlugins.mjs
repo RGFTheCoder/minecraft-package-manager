@@ -44,7 +44,7 @@ export async function installSpigotPlugin(name) {
 
   for (let i = 0; i < jsonData.length; ++i) {
     const plugin = jsonData[i];
-    plugin.name = plugin.name.replace(/[^a-zA-Z0-9_]/g, '');
+    plugin.name = plugin.name.replace(/[^a-zA-Z0-9]/g, '');
     console.log(templates.pluginTextList(i, plugin.name, plugin.downloads));
   }
 
