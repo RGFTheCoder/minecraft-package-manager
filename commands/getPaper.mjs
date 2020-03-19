@@ -1,7 +1,7 @@
+import { createWriteStream, existsSync, unlinkSync } from 'fs';
 import fetch from 'node-fetch';
 import { T } from '../utils/template.mjs';
 import { init } from './init.mjs';
-import { unlinkSync, existsSync, createWriteStream } from 'fs';
 
 const downloadURL = T`https://papermc.io/api/v1/paper/${0}/${0}/download`;
 const dataURL = T`https://papermc.io/api/v1/paper/${''}/latest`;

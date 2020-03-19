@@ -1,21 +1,18 @@
-import { T } from '../utils/template.mjs';
-import fetch from 'node-fetch';
 import c from 'ansi-colors';
-import { input } from '../utils/getInput.mjs';
-import { ensure } from '../utils/ensure.mjs';
-import unzip from 'unzip-stream';
 import {
-  createWriteStream,
-  mkdtemp,
-  mkdtempSync,
-  mkdirSync,
-  existsSync,
   createReadStream,
-  unlink,
+  createWriteStream,
+  existsSync,
+  mkdirSync,
+  mkdtempSync,
   renameSync
 } from 'fs';
+import fetch from 'node-fetch';
 import { join } from 'path';
-import { remove } from './remove.mjs';
+import unzip from 'unzip-stream';
+import { ensure } from '../utils/ensure.mjs';
+import { input } from '../utils/getInput.mjs';
+import { T } from '../utils/template.mjs';
 import { removeObj } from './remove.mjs';
 
 const templates = {
