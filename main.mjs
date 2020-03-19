@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+#!/bin/sh
+':'; //# comment; exec /usr/bin/env node --experimental-modules "$0" "$@"
 const args = process.argv.slice(2);
 
 import * as fs from 'fs';
