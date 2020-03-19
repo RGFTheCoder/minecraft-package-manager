@@ -2,7 +2,7 @@ import { levenshtein_distance } from '../utils/strDist.mjs';
 import { T } from '../utils/template.mjs';
 import { input } from '../utils/getInput.mjs';
 import c from 'ansi-colors';
-import { unlink, unlinkSync } from 'fs';
+import { unlink, unlinkSync, existsSync } from 'fs';
 import { join } from 'path';
 
 const templates = {
@@ -41,7 +41,7 @@ export async function removeObj(choice) {
 
   console.log(templates.pluginText(choice.name));
   for (let i of choice.files) {
-    unlinkSync(join('./plugins', i));
+    if (existsSync(join('./plugins', i))) unlinkSync(join('./plugins', i));
   }
 
   this.plugins.splice(id, 1);
