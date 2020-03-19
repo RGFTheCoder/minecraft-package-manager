@@ -47,13 +47,13 @@ export async function installBukkitPlugin(name) {
     });
     if (!existsSync('./tmp/')) mkdirSync('./tmp/');
     const tmpdir = mkdtempSync('./tmp/');
-    const tmpFile = tempFile(tmpdir, choice.name);
+    const tmpFile = tempFile(tmpdir, name);
     const dest = createWriteStream(tmpFile);
     const writer = res.body.pipe(dest);
 
-    const files = this.plugins.filter(a => a.id == choice.id)[0].files;
+    const files = this.plugins.filter(a => a.id == name)[0].files;
 
-    files.push(tempFile('.', choice.name, choice.file.type));
+    files.push(tempFile('.', name));
 
     if (!existsSync('./plugins')) mkdirSync('./plugins');
     for (let file of files) {
