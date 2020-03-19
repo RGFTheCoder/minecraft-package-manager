@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const args = process.argv.slice(2);
 
 import * as fs from 'fs';
