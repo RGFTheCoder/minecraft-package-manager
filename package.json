@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "ansi-colors": "^4.1.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "unzip-stream": "^0.3.0"
   },
   "bin": "main.mjs"
